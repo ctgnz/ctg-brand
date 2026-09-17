@@ -1,0 +1,133 @@
+/*
+ * CTG Games brand palette - master copy.
+ *
+ * Source: colors extracted from the eagle logo (logo/logo_128.png) and the
+ * pale blue background the JMSFX Icon Generator navbar was already using.
+ *
+ * For Bootstrap 5.3 consumers: load this after bootstrap.css so these
+ * overrides win. Non-Bootstrap consumers can take just the :root block -
+ * the rest is Bootstrap-specific plumbing.
+ */
+
+:root {
+  /* Raw brand tokens, for anything that needs the literal value directly
+     (e.g. inline styles, chart colors) rather than through a Bootstrap slot. */
+  --brand-pale-blue: #cfe2ff;
+  --brand-navy: #1e3475;
+  --brand-gold: #c6ad5c;
+  --brand-gold-shade: #ad9548;
+  --brand-gray: #6c757d;
+
+  /* Bootstrap's "primary" slot drives .btn-primary, .text-primary,
+     .border-primary, active nav-pills, etc. - map it to navy so those
+     components stay legible (navy-on-white / white-on-navy both pass
+     contrast; pale blue would not as a solid button fill). */
+  --bs-primary: var(--brand-navy);
+  --bs-primary-rgb: 30, 52, 117;
+  --bs-primary-text-emphasis: var(--brand-navy);
+
+  /* Bootstrap's "subtle" slots are the light-tint backgrounds/borders -
+     this is where the pale blue belongs (e.g. navbar surface via
+     bg-primary-subtle instead of a bg-opacity-25 trick). */
+  --bs-primary-bg-subtle: var(--brand-pale-blue);
+  --bs-primary-border-subtle: #9fb8e0;
+}
+
+/*
+ * Component-level primary overrides.
+ *
+ * The --bs-primary* root tokens above only reach the handful of newer
+ * utility classes Bootstrap 5.3 actually wired to them (.text-bg-primary,
+ * .bg/.border/.text-primary-subtle, .alert-primary). Most component
+ * variants - .btn-primary, .btn-outline-primary, .nav-pills active state,
+ * form-check/switch/range checked & focus colors - have their blue baked
+ * in as literal hex at Sass compile time, so they need direct overrides
+ * here, matching Bootstrap's own per-component variable shape.
+ */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand-navy);
+  --bs-btn-border-color: var(--brand-navy);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #16285c;
+  --bs-btn-hover-border-color: #142352;
+  --bs-btn-focus-shadow-rgb: 30, 52, 117;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #142352;
+  --bs-btn-active-border-color: #101c45;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--brand-navy);
+  --bs-btn-disabled-border-color: var(--brand-navy);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand-navy);
+  --bs-btn-border-color: var(--brand-navy);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-navy);
+  --bs-btn-hover-border-color: var(--brand-navy);
+  --bs-btn-focus-shadow-rgb: 30, 52, 117;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--brand-navy);
+  --bs-btn-active-border-color: var(--brand-navy);
+  --bs-btn-disabled-color: var(--brand-navy);
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: var(--brand-navy);
+  --bs-nav-link-color: var(--brand-navy);
+}
+
+.form-check-input:checked {
+  background-color: var(--brand-navy);
+  border-color: var(--brand-navy);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #8e9aba; /* 50% white tint of navy, same ratio Bootstrap uses for its own focus border */
+  box-shadow: 0 0 0 0.25rem rgba(30, 52, 117, 0.25);
+}
+
+.form-range::-webkit-slider-thumb {
+  background-color: var(--brand-navy);
+}
+.form-range::-webkit-slider-thumb:active {
+  background-color: #bcc2d6; /* 70% white tint of navy */
+}
+.form-range::-moz-range-thumb {
+  background-color: var(--brand-navy);
+}
+.form-range::-moz-range-thumb:active {
+  background-color: #bcc2d6;
+}
+
+/* Gold accent utilities - Bootstrap has no built-in "gold" theme color,
+   so these are hand-rolled following Bootstrap 5.3's CSS-variable button API. */
+.btn-gold {
+  --bs-btn-color: var(--brand-navy);
+  --bs-btn-bg: var(--brand-gold);
+  --bs-btn-border-color: var(--brand-gold);
+  --bs-btn-hover-color: var(--brand-navy);
+  --bs-btn-hover-bg: var(--brand-gold-shade);
+  --bs-btn-hover-border-color: var(--brand-gold-shade);
+  --bs-btn-focus-shadow-rgb: 198, 173, 92;
+  --bs-btn-active-color: var(--brand-navy);
+  --bs-btn-active-bg: var(--brand-gold-shade);
+  --bs-btn-active-border-color: var(--brand-gold-shade);
+  --bs-btn-disabled-color: var(--brand-navy);
+  --bs-btn-disabled-bg: var(--brand-gold);
+  --bs-btn-disabled-border-color: var(--brand-gold);
+}
+
+.text-gold {
+  color: var(--brand-gold) !important;
+}
+
+.bg-gold {
+  background-color: var(--brand-gold) !important;
+}
+
+.border-gold {
+  border-color: var(--brand-gold) !important;
+}
