@@ -61,6 +61,20 @@ If a project starts using a Bootstrap component not covered here (pagination,
 dropdowns, list groups, progress bars), check whether it hardcodes the blue and
 add the override to `brand.css` rather than patching it locally.
 
+## Licensing
+
+Two different things live in this repo and they are licensed differently:
+
+| Path | Terms |
+|---|---|
+| `css/` | Apache License 2.0 — see `LICENSE.md` |
+| `logo/` | All rights reserved. Trademarks of CTG Games Limited, **not** covered by the Apache grant. |
+
+Apache 2.0 grants no trademark rights (Section 6), and the copyright grant
+is not intended to cover the logo files either. `NOTICE` sets out what use
+of the marks is and isn't permitted; under Apache 2.0 §4(d) anyone
+redistributing this work has to reproduce that file.
+
 ## Adding it to a project
 
 ```sh
