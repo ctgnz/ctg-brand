@@ -23,8 +23,15 @@ active range thumb).
 - `css/brand.css` — the palette as CSS custom properties, plus Bootstrap 5.3
   overrides. Non-Bootstrap consumers (e.g. the WordPress site) can take just
   the `:root` block and ignore the rest.
-- `logo/` — the eagle mark at 16/32/48/64/128px, suitable for favicons and
-  navbar use.
+- `logo/logo_*.png` — the **eagle mark**, at 16/32/48/64/128/256px. Used for
+  favicons and in-app navbars across the ctgnz projects.
+- `logo/ctg-logo-small.png` (32px) and `logo/ctg-logo-large-border.png`
+  (120×60) — the **CTG Games wordmark**, for the company WordPress site.
+
+The two marks are distinct and not interchangeable: the eagle identifies the
+applications, the wordmark identifies the company. Both wordmark files were
+recolored from their original `#004586` to the brand navy `#1E3475` so a page
+can carry the wordmark and the palette without showing two different blues.
 
 ## Using it in a Bootstrap project
 
