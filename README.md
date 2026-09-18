@@ -25,13 +25,35 @@ active range thumb).
   the `:root` block and ignore the rest.
 - `logo/logo_*.png` — the **eagle mark**, at 16/32/48/64/128/256px. Used for
   favicons and in-app navbars across the ctgnz projects.
+- `logo/ctg-logo-wordmark.svg` — the **CTG Games wordmark** (`ctg` over
+  `games`, bordered), for the company WordPress site. Vector master, with the
+  lettering stored as outlines so it needs no font installed. `@240`, `@480`
+  and `@960` PNGs are exported from it for contexts that can't take SVG.
+- `logo/ctg-logo-small.svg` — the **compact square mark** (`ctg` only, 1:1),
+  for favicons, avatars and anywhere the full wordmark would be illegible.
+  `@64`, `@128` and `@256` PNGs alongside it.
 - `logo/ctg-logo-small.png` (32px) and `logo/ctg-logo-large-border.png`
-  (120×60) — the **CTG Games wordmark**, for the company WordPress site.
+  (120×60) — the original 2015 rasters, kept for reference. They were the only
+  copies that survived, which is why both vectors above were rebuilt from them.
 
 The two marks are distinct and not interchangeable: the eagle identifies the
-applications, the wordmark identifies the company. Both wordmark files were
-recolored from their original `#004586` to the brand navy `#1E3475` so a page
-can carry the wordmark and the palette without showing two different blues.
+applications, the wordmark identifies the company. All wordmark files use the
+brand navy `#1E3475`, recolored from the original `#004586` so a page can carry
+the wordmark and the palette without showing two different blues.
+
+### How the wordmark was rebuilt
+
+No source file for the wordmark survived, so the vector was reconstructed from
+the 120×60 raster. The layout was measured off that bitmap — 3px border, both
+words left-aligned at x=31, `games` at exactly half the x-height of `ctg` and
+tracked to match its width — and the typeface identified as **Verdana Bold** by
+scoring candidates on both letterform overlap and natural proportions (its
+`ctg` aspect ratio is within 1% of the original, where other candidates were
+9-17% off). The rebuild matches the original at 0.90 IoU.
+
+The lettering is stored as outlines, so nothing depends on Verdana being
+installed. If a clean-room asset under an open font licence is ever wanted,
+DejaVu Sans Bold is the closest freely licensed substitute.
 
 ## Using it in a Bootstrap project
 
