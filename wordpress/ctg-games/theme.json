@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "Base"
+				},
+				{
+					"slug": "contrast",
+					"color": "#1E3475",
+					"name": "Navy"
+				},
+				{
+					"slug": "accent-1",
+					"color": "#C6AD5C",
+					"name": "Gold"
+				},
+				{
+					"slug": "accent-2",
+					"color": "#CFE2FF",
+					"name": "Pale Blue"
+				},
+				{
+					"slug": "accent-3",
+					"color": "#1E3475",
+					"name": "Navy Accent"
+				},
+				{
+					"slug": "accent-4",
+					"color": "#6C757D",
+					"name": "Grey"
+				},
+				{
+					"slug": "accent-5",
+					"color": "#F5F8FC",
+					"name": "Tint"
+				},
+				{
+					"slug": "accent-6",
+					"color": "color-mix(in srgb, currentColor 20%, transparent)",
+					"name": "Subdued"
+				}
+			]
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif"
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--accent-3)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--accent-1)",
+						"text": "var(--wp--preset--color--contrast)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--accent-1)",
+						"text": "var(--wp--preset--color--contrast)"
+					}
+				}
+			}
+		}
+	}
+}

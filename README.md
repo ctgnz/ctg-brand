@@ -21,14 +21,20 @@ active range thumb).
 ## Contents
 
 - `css/brand.css` — the palette as CSS custom properties, plus Bootstrap 5.3
-  overrides. Non-Bootstrap consumers (e.g. the WordPress site) can take just
-  the `:root` block and ignore the rest.
+  overrides, for the apps on the subdomains.
+- `wordpress/` — a Twenty Twenty-Five child theme carrying the same palette to
+  the WordPress site at ctg.co.nz, and matching the apps' header and footer so
+  that clicking through from the company site to an app reads as moving between
+  sections rather than between sites. See `wordpress/README.md`.
 - `logo/logo_*.png` — the **eagle mark**, at 16/32/48/64/128/256px. Used for
   favicons and in-app navbars across the ctgnz projects.
 - `logo/ctg-logo-wordmark.svg` — the **CTG Games wordmark** (`ctg` over
   `games`, bordered), for the company WordPress site. Vector master, with the
   lettering stored as outlines so it needs no font installed. `@240`, `@480`
   and `@960` PNGs are exported from it for contexts that can't take SVG.
+- `logo/ctg-logo-wordmark-transparent.svg` — the same wordmark with no white
+  fill, for placing on a coloured background such as the pale blue header bar.
+  `@480` and `@960` PNGs alongside it.
 - `logo/ctg-logo-small.svg` — the **compact square mark** (`ctg` only, 1:1),
   for favicons, avatars and anywhere the full wordmark would be illegible.
   `@64`, `@128` and `@256` PNGs alongside it.
