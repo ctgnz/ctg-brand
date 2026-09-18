@@ -2,6 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
+		"layout": {
+			"contentSize": "880px",
+			"wideSize": "1340px"
+		},
 		"color": {
 			"palette": [
 				{
@@ -49,7 +53,8 @@
 	},
 	"styles": {
 		"typography": {
-			"fontFamily": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif"
+			"fontFamily": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif",
+			"fontSize": "1rem"
 		},
 		"elements": {
 			"heading": {
